@@ -1,0 +1,5 @@
+John|D|Rockefeller
+John|Q|Public
+Fred|R|Flintstone
+
+Max|M|Griffon
