@@ -1,5 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Main {
@@ -10,6 +9,7 @@ public class Main {
 
         try {
             Scanner input = new Scanner(new File("input.txt"));
+            BufferedWriter bookOutput =new BufferedWriter(new FileWriter("bookOut.txt"));
             while(input.hasNextLine()){
 
                 String line = input.nextLine();
@@ -22,12 +22,16 @@ public class Main {
                     n = n+1;
                     if(pages < shortestBookSoFar)
                         shortestBookSoFar = pages;
-                    System.out.println(bookToString(title, pages));
+                   // System.out.println(bookToString(title, pages));
+                    bookOutput.write(bookToString(title,pages));
+                    bookOutput.newLine();
+                    bookOutput.flush();  // not needed.  Don't use unless there is good reason
                 }
 
             }
             input.close();
-        } catch (FileNotFoundException e) {
+            bookOutput.close();
+        } catch (IOException e) {
             System.err.println("Could not open input file");
             System.exit(1);
         }
@@ -35,6 +39,20 @@ public class Main {
         System.out.println("The average number of pages is " + average(sum, n));
         System.out.println("The shortest book was " +shortestBookSoFar + " pages");
 
+
+        //isolated buffered writer
+        try {
+            BufferedWriter exampleOutput = new BufferedWriter(new FileWriter("example.txt"));
+
+            exampleOutput.write(52);
+            exampleOutput.newLine();
+            exampleOutput.write("The cow jumped over the moon");
+            exampleOutput.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("\uD83D\uDC35");
     }
     public static String bookToString(String title, int pages){
         String s = String.format("%30s %4d %4.1f hours",title, pages, timeToRead(pages, 1.0));
