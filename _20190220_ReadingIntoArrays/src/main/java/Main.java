@@ -36,8 +36,10 @@ public class Main {
                     while (i < parts.length && n < maximumSize){
                        String word = parts[i].toLowerCase();
                         if(word.length() > 0){
-                            words[n] = word;
-                            n++;
+                            if(!needleIsInHaystack(words,word,n)) {
+                                words[n] = word;
+                                n++;
+                            }
                         }
                         i++;
                     }
@@ -54,6 +56,12 @@ public class Main {
 
     public static boolean needleIsInHaystack(String[] haystack, String needle, int n){
         boolean found = false;
+
+        int i = 0;
+        while(!found && i < n){
+            found = needle.equals(haystack[i]);
+            i++;
+        }
 
         return found;
     }
