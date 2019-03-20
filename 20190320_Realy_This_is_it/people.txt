@@ -1,0 +1,28 @@
+Canopus	Carina	-0.9	650
+Epsilon Canis Majoris	Canis Major	1.6	325
+Altair	Aquila	0.9	18
+Beta Crucis	Crux	1.5	465
+Alpha Centauri	Centaurus	0.1	4
+Mira	Cetus	2-10	250
+Pollux	Gemini	1.2	31
+Procyon	Canis Minor	0.5	10
+Lambda Scorpii	Scorpius	1.7	205
+Rigel	Orion	0.3	545
+Sirius	Canis Major	-1.6	8
+Achernar	Eridanus	0.6	70
+Beta Centauri	Centaurus	0.9	130
+Alpha-one Crucis	Crux	1.6	150
+Deneb	Cygnus	1.3	465
+Bellatrix	Orion	1.7	215
+Antares	Scorpius	1.2	170
+Epsilon Carinae	Carina	1.7	325
+Vega	Lyra	0.1	23
+Regulus	Leo	1.3	70
+Arcturus	Bootes	0.2	32
+Fomalhaut	Piscis Austrinus	1.3	27
+Aldebaran	Taurus	1.1	54
+Castor	Gemini	1.6	44
+Epsilon Ursae Majoris	Ursa Major	1.7	50
+Spica	Virgo	1.2	190
+Capella	Auriga	0.2	42
+Betelgeuse	Orion	0.9	600
